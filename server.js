@@ -34,7 +34,7 @@ router.get('/', function(req, res) {
 	res.json({ message: 'hooray! welcome to our api! please post on /api/logon' });
 });
 
-// on routes that end in /bears
+// on routes that end in /logon
 // ----------------------------------------------------
 router.route('/logon')
 
