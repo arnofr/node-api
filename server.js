@@ -36,13 +36,18 @@ router.get('/', function(req, res) {
 
 // on routes that end in /logon
 // ----------------------------------------------------
-router.route('/logon')
-
-
-	.post(function(req, res) {
+router.route('/logon').post(function(req, res) {
 		res.json({ message: 'Trying to Log In with Username: '+req.body.username });
 	});
 
+	router.route('/log').post(function(req, res) {
+		try {
+			JSON.parse(req.body);
+			res.json(req.body);
+		} catch (e) {
+			console.log("not JSON")
+			res.json(req.body);
+		}
 
 
 
